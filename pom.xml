@@ -28,25 +28,38 @@
             <scope>test</scope>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-scala_2.11</artifactId>-->
+<!--            <version>1.6.1</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-streaming-scala_2.11</artifactId>-->
+<!--            <version>1.6.1</version>-->
+<!--        </dependency>-->
+
+        <!-- 使用Java语言开发Flink程序需要添加的配置 -->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-java</artifactId>
-            <version>1.6.1</version>
+            <version>1.10.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java_2.11</artifactId>
-            <version>1.6.1</version>
+            <version>1.10.0</version>
         </dependency>
 
+        <!-- Kafka连接器 -->
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-table_2.11</artifactId>
-            <version>1.6.1</version>
+            <artifactId>flink-connector-kafka_2.11</artifactId>
+            <version>1.9.2</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
