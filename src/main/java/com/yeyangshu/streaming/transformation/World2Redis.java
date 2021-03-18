@@ -44,6 +44,13 @@ public class World2Redis {
             // 在subtask启动的时候，首先调用的方法
             @Override
             public void open(Configuration parameters) throws Exception {
+                // 获取运行时的参数
+                // 获取Task的名字
+                String taskName = getRuntimeContext().getTaskName();
+                // 获取子任务的名字
+                String subTasks = getRuntimeContext().getTaskNameWithSubtasks();
+                System.out.println("taskName: " + taskName + ", subTasksName: " + subTasks);
+
                 // 连接到Redis
                 jedis = new Jedis("localhost", 6379);
                 // 选择Redis第3号数据库
