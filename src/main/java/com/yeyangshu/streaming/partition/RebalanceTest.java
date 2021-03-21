@@ -4,7 +4,7 @@ import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 /**
- * 轮询
+ * 随机+取模
  * 场景：增大分区、提高并行度，解决数据倾斜
  * DataStream → DataStream
  * 轮询分区元素，均匀的将元素分发到下游分区，下游每个分区的数据比较均匀，在发生数据倾斜时非常
